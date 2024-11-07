@@ -1,0 +1,110 @@
+:root{
+    background-color: gold;
+    user-select: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.totalblack{
+    width:90%;
+    height:90%;
+    background-color: black;
+    margin-top: 3%;
+    margin-left: 3%;
+    box-shadow: 10px 3px 5px 6px;
+    border-radius: 20px;
+    position: relative;
+}
+ul li{
+    text-decoration: none;
+    display: flex;
+    display: inline-block;
+    align-content: space-evenly;
+    padding: 0 30px;
+    right: 0;
+}
+ul{
+display: flexbox;
+align-content: flex-end;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(54, 32, 32);
+    border-radius: 50px;
+}
+.container{
+     background-color:rgba(26, 15, 15, 0.856);
+     width: 60%;
+     height: 96%;
+     margin-left: 38%;
+     border-radius: 20px;
+     margin-top: 15px;
+}
+.icontainer{
+background-color:rgba(26, 15, 15, 0.856);
+width: 400px;
+height: 550px;
+position: absolute;
+border-radius: 10px;
+margin: 10px 12px ;
+overflow: hidden;
+}
+.icontainer img{
+width: 90px;
+background-size: cover;
+margin-left: 100px;
+margin-top: 90px;
+border-radius: 50%;
+background-position: center;
+}
+.myname{
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-left: 50px;
+}
+.edu h2,h4,p{
+color: #ffff;
+margin-left: 50px;
+}
+.edu{
+color: #ffff;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.edu p{
+margin-left: 70px;
+}
+.edu h2{
+font-weight: 900;
+}
+.tele{
+width: 20px;
+}    
+.cer{
+color: #ffff;
+position: relative;
+top: 0;
+}
+.active{
+display: none;
+}
+a{
+text-decoration: none;
+font-size: 20px;
+
+color: orange;
+transition: all .5s;
+padding: 40px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a:hover{
+color: #ffff;
+}
+.ww{
+color: #ffff;
+}
