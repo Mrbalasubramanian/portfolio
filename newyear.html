@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Island+Moments&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(rgba(0,0,0,0.5),rgb(0, 0, 0,0.5)),url(pexels-sohi-807598.jpg);
+            color: white;
+            background-size: cover;
+            background-position: center;
+        }
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            column-gap:10px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+        .newyear{
+            font-family: 'Island Moments', cursive;
+            font-size:30px;
+            font-weight:300px;
+            margin-top:30px;
+        }
+        .box{
+            width:80px;
+            height:80px;
+            text-align:center;
+        }
+        .box h2{
+            font-size:13px;
+        }
+        .box small{
+            font-size:16px;
+        }
+        #days{
+            font-size:20px;
+        }
+        #hours {
+            font-size: 20px;
+        }
+        #minutes {
+            font-size: 20px;
+        }
+        #secound {
+            font-size: 20px;
+        }
+        @media(min-width:576px){
+            .newyear{
+                font-size:60px;
+            }
+            p{
+                font-size:18px;
+            }
+            .box small{
+                font-size:2opx;
+            }
+         
+            
+        }
+        @media(min-width:768px){
+            .newyear{
+                font-size:100px;
+            }
+            .p{
+                font-size:30px;
+            }
+            .box small{
+                font-size:25px;
+            }    
+        }
+    </style>
+</head>
+<body>
+    <p>countown</p>
+    <h2 class="newyear">New year</h2>
+    <div class="counter">
+        <div class="box">
+            <h2 id="days">00</h2>
+            <small>days</small>
+        </div>
+        <div class="box">
+            <h2 id="hours">00</h2>
+            <small>hours</small>
+        </div>
+
+        <div class="box">
+            <h2 id="minutes">00</h2>
+            <small>minutes</small>
+        </div>
+
+        <div class="box">
+            <h2 id="secound">00</h2>
+            <small>seconds</small>
+        </div>
+    </div>
+    <script>
+        function update(){
+    const days=document.querySelector("#days");
+    const hours=document.querySelector("#hours")
+    const minutes=document.querySelector("#minutes")
+    const secound=document.querySelector("#secound")
+    const cdate=new Date();
+    
+    const cyear=new Date().getFullYear();
+    
+   const nyear=new Date(`January 1 ${cyear+1} 00:00:00`);
+    const currentdate=new Date();
+    const diff=nyear-cdate;
+    console.log(diff);
+    const d=Math.floor(diff/1000/60/60/24);
+    const h=Math.floor((diff/1000/60/60)%24);
+    const m=Math.floor((diff/1000/60)%60);
+    const s=Math.floor((diff/1000)%60);
+    days.innerHTML=d;
+    hours.innerHTML=h;
+    minutes.innerHTML=m;
+    secound.innerHTML=s;
+        }
+    setInterval(update,1000);
+    </script>
+</body>
+</html>
